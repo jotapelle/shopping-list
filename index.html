@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Shopping List</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    <div class="section no-pad-bot">
+        <div class="container">
+            <h1 class="header center teal-text">Shopping List</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Add/remove your items into your shopping list!</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col s2"></div>
+                <div class="col s8">
+                    <div class="input-field col s4 l3">
+                        <input id="item" type="text" class="validate">
+                        <label for="item">Item</label>
+                    </div>
+                    <div class="input-field col s4 l2">
+                        <input id="quantity" type="number" class="validate">
+                        <label for="quantity">Quantity</label>
+                    </div>
+                    <div class="input-field col s4 l2">
+                        <input id="price" type="number" class="validate">
+                        <label for="price">Price</label>
+                    </div>
+                    <div class="input-field col s6 l2 center-align">
+                        <button class="btn waves-effect waves-light teal darken-1" onclick="validateItem()">Add</button>
+                    </div>  
+                    <div class="input-field col s6 l3 center-align">
+                        <button class="btn waves-effect waves-light teal darken-1" onclick="removeAll()">Remove all</button>
+                    </div>
+                </div>
+                <div class="col s2"></div>
+            </div>
+            <div class="row">
+                <div class="col s2"></div>
+                <div class="col s8">
+                    <ul id="collection-container" class="collection with-header z-depth-4">
+                        <li class='collection-item'><div>No items found.</div></li>
+                    </ul>
+                </div>
+                <div class="col s2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Scripts-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
